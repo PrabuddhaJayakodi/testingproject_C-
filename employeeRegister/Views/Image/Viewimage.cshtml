@@ -1,0 +1,42 @@
+﻿@model employeeRegister.Models.Image
+
+@{
+    ViewBag.Title = "Viewimage";
+}
+
+<h2>Viewimage</h2>
+
+<div>
+    <h4>Image</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+           <img src="@Url.Content(Model.ImagePath)" width="350" height="300"
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
